@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RepGet – Rank on Google. Get recommended by AI.</title>
+<meta name="description" content="RepGet publishes SEO content, earns quality backlinks, and builds the authority that gets your business discovered on Google and in AI answers.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23C84B00'/%3E%3Cpath d='M9 23V9h8a4.5 4.5 0 010 9h-8M16 18l6 5' stroke='white' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--o:#C84B00;--o-hi:#FF5A1F;--o-tint:#FFF3EA;--ink:#171717;--ink2:#4A4743;--mut:#76716B;--line:#E9E3DC;--warm:#FBF7F2;--bg:#fff;--r:14px;--ok:#1F8A4C;--bad:#C0341D;--hh:68px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{font:400 16px/1.6 'Instrument Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--o);outline-offset:3px;border-radius:6px}
+.w{width:min(1160px,100% - 40px);margin-inline:auto}
+.sr{position:absolute;left:-999px}.sr:focus{left:12px;top:12px;z-index:99;background:#fff;padding:8px 12px}
+h1,h2,h3{letter-spacing:-.025em;line-height:1.08;font-weight:600}
+h1{font-size:clamp(2.4rem,5.4vw,4.1rem)}h2{font-size:clamp(1.8rem,3.4vw,2.6rem)}h3{font-size:1.15rem;line-height:1.3}
+.o{color:var(--o)}.lead{font-size:1.125rem;color:var(--ink2);max-width:54ch}.sm{font-size:.875rem;color:var(--mut)}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 22px;border-radius:999px;border:1px solid transparent;font-weight:600;font-size:.95rem;cursor:pointer;transition:background .2s,border-color .2s,transform .2s,box-shadow .2s;white-space:nowrap}
+.btn svg{width:16px;height:16px;transition:transform .2s}.btn:hover svg.ar{transform:translateX(3px)}
+.b1{background:var(--o);color:#fff}.b1:hover{background:#A93E00;box-shadow:0 6px 18px -8px var(--o)}
+.b2{background:#fff;border-color:var(--line);color:var(--ink)}.b2:hover{border-color:var(--ink)}
+.b3{background:transparent;color:var(--ink);height:40px;padding:0 14px}.b3:hover{background:var(--warm)}
+.btn:active{transform:translateY(1px)}.btn[disabled]{opacity:.6;cursor:wait}
+.ic{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+/* header */
+header.h{position:sticky;top:0;z-index:50;height:var(--hh);display:flex;align-items:center;background:rgba(255,255,255,.72);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:background .25s,border-color .25s}
+header.h.s{background:rgba(255,255,255,.94);border-color:var(--line)}
+.hi{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.2rem;letter-spacing:-.03em}
+.logo i{width:30px;height:30px;border-radius:8px;background:var(--o);display:grid;place-items:center}.logo svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:3;stroke-linecap:round}
+nav.n{display:flex;gap:4px}nav.n a{padding:8px 14px;border-radius:999px;font-size:.92rem;font-weight:500;color:var(--ink2);transition:.2s}nav.n a:hover{color:var(--ink);background:var(--warm)}
+.ha{display:flex;gap:6px;align-items:center}.ha .btn{height:42px}
+.mb{display:none;background:none;border:0;width:44px;height:44px;border-radius:10px;cursor:pointer;place-items:center}
+.dr{position:fixed;inset:0;z-index:60;background:rgba(23,23,23,.4);opacity:0;visibility:hidden;transition:.25s}
+.dr.on{opacity:1;visibility:visible}
+.dp{position:absolute;right:0;top:0;bottom:0;width:min(86vw,340px);background:#fff;padding:20px;display:flex;flex-direction:column;gap:4px;transform:translateX(100%);transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.dr.on .dp{transform:none}.dp a:not(.btn){padding:14px 8px;font-size:1.1rem;font-weight:500;border-bottom:1px solid var(--line)}.dp .btn{margin-top:12px}
+/* hero */
+.hero{background:linear-gradient(#FFF4EB,#fff 70%);padding:64px 0 72px;margin-top:calc(var(--hh) * -1);padding-top:calc(var(--hh) + 56px)}
+.hg{display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center}
+.hero h1{margin-bottom:20px}.hero .lead{margin-bottom:28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:20px;font-size:.875rem;color:var(--mut)}
+.trust span{display:flex;align-items:center;gap:6px}.trust svg{width:15px;height:15px;color:var(--o)}
+.hw{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-weight:600;font-size:.92rem}
+.hw i{width:32px;height:32px;border-radius:50%;background:var(--o);display:grid;place-items:center}.hw i svg{width:12px;height:12px;fill:#fff;margin-left:2px}
+/* command center */
+.cc{position:relative;padding:14px 0 30px 0}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:0 1px 2px rgba(23,23,23,.04),0 18px 40px -24px rgba(23,23,23,.22)}
+.dash{padding:20px;display:grid;gap:18px}
+.dh{display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--mut)}
+.dh b{color:var(--ink);font-size:.95rem;font-weight:600}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:600;padding:3px 10px;border-radius:999px;background:#E9F6EE;color:var(--ok)}
+.tag.m{background:var(--o-tint);color:var(--o)}.tag.n{background:#F2EFEB;color:var(--mut)}.tag.r{background:#FCEBE7;color:var(--bad)}
+.tag i{width:6px;height:6px;border-radius:50%;background:currentColor}
+.rows{display:grid}.row{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-top:1px solid var(--line);font-size:.92rem;gap:12px}
+.row:first-child{border-top:0}
+.pos{font-weight:700;font-variant-numeric:tabular-nums;min-width:3ch;text-align:right}.pos small{display:block}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.spark{height:64px;width:100%}.spark path.l{stroke-dasharray:400;stroke-dashoffset:400;animation:dr 1.6s .4s ease forwards}
+@keyframes dr{to{stroke-dashoffset:0}}
+.chip{position:absolute;display:flex;gap:10px;align-items:center;padding:10px 14px;font-size:.82rem;font-weight:600;animation:fl 6s ease-in-out infinite}
+.chip small{display:block;font-weight:400;color:var(--mut);font-size:.74rem}
+.c1{left:-28px;bottom:0}.c2{right:-12px;top:-6px;animation-delay:-3s}
+@keyframes fl{50%{transform:translateY(-6px)}}
+.chip .ic{color:var(--o)}
+/* sections */
+section{padding:88px 0}
+.hd{max-width:680px;margin:0 auto 44px;text-align:center}.hd p{margin:14px auto 0;color:var(--ink2)}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative}
+.flow>div{padding:0 18px;border-left:1px solid var(--line)}.flow>div:first-child{border-left:0;padding-left:0}
+.flow .ic{width:26px;height:26px;color:var(--o);margin-bottom:14px}.flow h3{font-size:1rem;margin-bottom:4px}.flow p{font-size:.88rem;color:var(--mut);line-height:1.5}
+/* audit */
+.audit{background:var(--warm);border-block:1px solid var(--line)}
+.ab{max-width:960px;margin:0 auto;padding:36px;border-color:#F3D9C6}
+.ben{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-bottom:32px}
+.ben>div{padding:0 28px;border-left:1px solid var(--line)}.ben>div:first-child{padding-left:0;border:0}
+.ben h3{display:flex;gap:10px;align-items:center;margin-bottom:8px;font-size:1.02rem}.ben .ic{color:var(--o)}.ben .n{color:var(--o);font-weight:600;font-variant-numeric:tabular-nums}.ben p{font-size:.92rem;color:var(--ink2);line-height:1.5}
+.url{display:flex;align-items:center;gap:10px;padding:8px 8px 8px 20px;border:1.5px solid var(--line);border-radius:999px;background:#fff;transition:border-color .2s,box-shadow .2s}
+.url:focus-within{border-color:var(--o);box-shadow:0 0 0 4px rgba(200,75,0,.12)}.url.e{border-color:var(--bad)}
+.url input{flex:1;min-width:0;border:0;outline:0;height:48px;font-size:1.02rem;background:none}.url .ic{color:var(--mut)}
+.err{min-height:22px;margin:8px 0 0 20px;font-size:.88rem;color:var(--bad)}
+.ck{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 24px;margin-top:18px;font-size:.88rem;color:var(--ink2)}
+.ck span{display:flex;gap:6px;align-items:center}.ck svg{width:16px;height:16px;color:var(--ok)}
+/* pricing */
+.pg{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto;align-items:stretch}
+.pc{padding:32px;display:flex;flex-direction:column;position:relative}
+.pc.pop{border:1.5px solid var(--o);box-shadow:0 24px 50px -28px rgba(200,75,0,.45)}
+.pop .bd{position:absolute;top:-13px;left:32px;background:var(--o);color:#fff;font-size:.75rem;font-weight:600;padding:4px 12px;border-radius:999px}
+.pc .d{color:var(--mut);font-size:.92rem;margin:4px 0 20px}
+.pr{display:flex;align-items:baseline;gap:6px;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:22px}
+.pr b{font-size:3rem;font-weight:600;letter-spacing:-.04em;line-height:1}.pr span{color:var(--mut)}
+.fl{list-style:none;padding:0;display:grid;gap:12px;margin-bottom:28px;flex:1}
+.fl li{display:flex;gap:10px;font-size:.92rem;color:var(--ink2);line-height:1.45}.fl svg{width:18px;height:18px;color:var(--o);flex:none;margin-top:1px}
+.fl li.x{color:var(--ink);font-weight:500}
+.pc .btn{width:100%}
+.cmp{display:block;margin:28px auto 0}
+.ct{max-width:900px;margin:20px auto 0;overflow:auto;display:none}.ct.on{display:block}
+table{width:100%;border-collapse:collapse;font-size:.92rem;min-width:520px}th,td{padding:13px 18px;text-align:left;border-bottom:1px solid var(--line)}td+td,th+th{text-align:center;width:22%}th{font-weight:600}tr:last-child td{border:0}
+/* final */
+.fin{padding:24px 0 88px}
+.fc{position:relative;overflow:hidden;background:#171717;color:#fff;border-radius:28px;padding:88px 32px;text-align:center;isolation:isolate}
+.fc::before{content:"";position:absolute;inset:0;z-index:-2;background-image:radial-gradient(#3A3733 1.6px,transparent 1.8px);background-size:26px 26px;-webkit-mask-image:linear-gradient(90deg,#000,transparent 38%,transparent 62%,#000);mask-image:linear-gradient(90deg,#000,transparent 38%,transparent 62%,#000)}
+.fc svg.gl{position:absolute;left:0;right:0;bottom:0;width:100%;height:150px;z-index:-1;opacity:.9}
+.fc h2{margin-bottom:14px}.fc h2 span{color:var(--o-hi)}.fc p{color:#C9C4BD;max-width:46ch;margin:0 auto 32px}
+.fc .cta{justify-content:center}.fc .b1{background:var(--o-hi);color:#171717}.fc .b1:hover{background:#FF7A47}
+.fc .b2{background:transparent;color:#fff;border-color:#5A554F}.fc .b2:hover{border-color:#fff}
+.fc .ck{color:#C9C4BD;margin-bottom:0;position:relative;z-index:1}.fc .ck svg{color:var(--o-hi)}
+.fc .dp2{position:absolute;display:flex;gap:8px;align-items:center;font-size:.78rem;padding:7px 12px;border:1px solid #3A3733;border-radius:999px;background:#201F1D;color:#C9C4BD}
+.dp2 b{color:var(--o-hi)}.d1{left:6%;top:18%}.d2{right:6%;top:30%}
+footer{border-top:1px solid var(--line);padding:32px 0;font-size:.85rem;color:var(--mut)}.fi{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+/* pages */
+.pgw{padding:64px 0 96px;min-height:70vh}.nar{max-width:460px;margin:0 auto}.nar .card,.fm{padding:32px}
+.fm{display:grid;gap:16px}label{font-weight:500;font-size:.9rem;display:grid;gap:6px}
+.in{height:48px;border:1.5px solid var(--line);border-radius:12px;padding:0 14px;width:100%;background:#fff;transition:.2s}.in:focus{outline:0;border-color:var(--o);box-shadow:0 0 0 4px rgba(200,75,0,.12)}.in.e{border-color:var(--bad)}
+.fe{color:var(--bad);font-size:.82rem;min-height:0}
+.or{display:flex;align-items:center;gap:12px;color:var(--mut);font-size:.82rem}.or::before,.or::after{content:"";flex:1;height:1px;background:var(--line)}
+.pl{display:grid;grid-template-columns:1fr 1fr;gap:12px}.pl label{cursor:pointer}.pl input{position:absolute;opacity:0}
+.pl span{display:block;padding:14px;border:1.5px solid var(--line);border-radius:12px;transition:.2s}.pl span b{display:block}.pl span small{color:var(--mut);font-weight:400}
+.pl input:checked+span{border-color:var(--o);background:var(--o-tint)}.pl input:focus-visible+span{outline:2px solid var(--o);outline-offset:2px}
+.note{font-size:.82rem;color:var(--mut);background:var(--warm);border:1px dashed #E0D4C7;border-radius:10px;padding:10px 12px}
+.sc{display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;padding:32px;margin:28px 0}
+.ring{--p:78;width:140px;height:140px;border-radius:50%;background:conic-gradient(var(--o) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center}
+.ring div{width:112px;height:112px;border-radius:50%;background:#fff;display:grid;place-items:center;text-align:center;line-height:1.1}.ring b{font-size:2.2rem;font-weight:600}.ring small{display:block;color:var(--mut);font-size:.8rem}
+.ms{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.ms b{font-size:1.6rem;font-weight:600;display:block;letter-spacing:-.02em}.ms span{font-size:.85rem;color:var(--mut)}
+.bar{height:5px;border-radius:9px;background:var(--line);margin-top:8px;overflow:hidden}.bar i{display:block;height:100%;background:var(--o);width:0;transition:width 1.1s .2s cubic-bezier(.2,.8,.2,1)}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.g3 .card{padding:24px}.g3 h3{margin:6px 0 10px}.g3 ul{padding-left:18px;font-size:.9rem;color:var(--ink2);display:grid;gap:6px}
+.big{font-size:2.4rem;font-weight:600;letter-spacing:-.03em}.demo{display:inline-block;font-size:.78rem;font-weight:600;background:#FFF7D6;color:#7A5B00;border-radius:999px;padding:4px 12px;margin-bottom:14px}
+.ld{position:fixed;inset:0;z-index:80;background:rgba(255,255,255,.96);display:none;place-items:center;padding:20px}.ld.on{display:grid}
+.ld ol{list-style:none;padding:0;display:grid;gap:12px;margin-top:22px;color:var(--mut)}.ld li{display:flex;gap:10px;align-items:center;transition:color .3s}.ld li.d{color:var(--ink)}.ld li.a{color:var(--o);font-weight:600}
+.ld li i{width:18px;height:18px;border-radius:50%;border:2px solid var(--line);flex:none;display:grid;place-items:center}.ld li.d i{background:var(--ok);border-color:var(--ok)}.ld li.d i::after{content:"";width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.ld li.a i{border-color:var(--o);border-top-color:transparent;animation:sp .8s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}
+.tl{display:grid;gap:0;max-width:720px;margin:0 auto}.tl>div{display:grid;grid-template-columns:56px 1fr;gap:20px;padding-bottom:36px;position:relative}
+.tl>div::before{content:"";position:absolute;left:27px;top:56px;bottom:8px;width:1px;background:var(--line)}.tl>div:last-child::before{display:none}
+.tl i{width:56px;height:56px;border-radius:50%;border:1px solid var(--line);background:#fff;display:grid;place-items:center;color:var(--o);font-style:normal;font-weight:600}
+.tl h3{margin:10px 0 4px}.tl p{color:var(--ink2)}
+.topics{display:grid;gap:10px}.topics label{display:flex;gap:12px;align-items:center;padding:14px;border:1.5px solid var(--line);border-radius:12px;cursor:pointer}.topics input{accent-color:var(--o);width:18px;height:18px}
+.ar{padding:24px}.ar h3{margin:10px 0 8px}.ar p{font-size:.9rem;color:var(--ink2)}.ar .pv{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:.85rem;color:var(--mut)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:#171717;color:#fff;padding:12px 18px;border-radius:12px;font-size:.9rem;opacity:0;transition:.3s;z-index:90;pointer-events:none;max-width:calc(100vw - 32px)}.toast.on{opacity:1;transform:translate(-50%,0)}
+.stp{display:flex;gap:8px;margin-bottom:24px}.stp i{flex:1;height:4px;border-radius:9px;background:var(--line)}.stp i.on{background:var(--o)}
+/* responsive */
+@media(max-width:1024px){.hg{grid-template-columns:1fr;gap:40px}.hero .lead{max-width:60ch}.flow{grid-template-columns:repeat(3,1fr);row-gap:32px}.flow>div:nth-child(4){border-left:0;padding-left:0}.c1{left:-8px}}
+@media(max-width:860px){nav.n,.ha .l{display:none}.mb{display:grid}.pg,.g3{grid-template-columns:1fr}.ben{grid-template-columns:1fr;gap:20px}.ben>div{padding:20px 0 0;border:0;border-top:1px solid var(--line)}.ben>div:first-child{border:0;padding-top:0}.ms{grid-template-columns:1fr 1fr}.sc{grid-template-columns:1fr;justify-items:center;text-align:center}}
+@media(max-width:600px){section{padding:64px 0}.hero{padding-bottom:48px}.cta .btn{width:100%}.flow{grid-template-columns:1fr 1fr}.flow>div{padding:0 0 0 14px!important}.flow>div:nth-child(odd){border-left:0;padding-left:0!important}.two{grid-template-columns:1fr}.chip.c2{display:none}.c1{left:0;bottom:-6px}.ab{padding:22px 18px}.url{flex-wrap:wrap;border-radius:22px;padding:8px}.url input{flex:1 1 calc(100% - 40px);height:44px}.url .btn{width:100%}.err{margin-left:6px}.fc{padding:64px 20px 110px;border-radius:22px}.dp2{display:none}.pc{padding:26px 22px}.pr b{font-size:2.6rem}.ha .b2{display:none}.ha .btn.cc2{height:38px;padding:0 14px;font-size:.85rem}.nar .card,.fm{padding:24px 20px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.spark path.l{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<a class="sr" href="#app">Skip to content</a>
+<header class="h" id="hd"><div class="w hi">
+  <a class="logo" href="#/" aria-label="RepGet home"><i><svg viewBox="0 0 24 24"><path d="M6 19V5h7a4 4 0 010 8H6M12 13l5 6"/></svg></i>RepGet</a>
+  <nav class="n" aria-label="Main"><a href="#/product">Product</a><a href="#/how-it-works">How it works</a><a href="#/pricing">Pricing</a><a href="https://repget.com/" rel="noopener">Resources</a></nav>
+  <div class="ha"><a class="btn b3 l" href="#/login">Log in</a><a class="btn b1 cc2" href="#/audit">Check my website</a><button class="mb" id="mb" aria-label="Open menu" aria-expanded="false" aria-controls="dr"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div>
+</div></header>
+<div class="dr" id="dr" aria-hidden="true"><div class="dp" role="dialog" aria-label="Menu">
+  <button class="mb" id="mx" aria-label="Close menu" style="align-self:flex-end"><svg class="ic" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <a href="#/product">Product</a><a href="#/how-it-works">How it works</a><a href="#/pricing">Pricing</a><a href="https://repget.com/" rel="noopener">Resources</a><a href="#/login">Log in</a>
+  <a class="btn b1" href="#/audit">Check my website</a></div></div>
+<main id="app" tabindex="-1"></main>
+<footer><div class="w fi"><span>© RepGet. Design prototype – sample data only.</span><span><a href="#/how-it-works">How it works</a> · <a href="#/pricing">Pricing</a> · <a href="#/login">Log in</a></span></div></footer>
+<div class="ld" id="ld" role="alertdialog" aria-live="polite" aria-label="Analyzing"><div><h2 style="font-size:1.6rem">Analyzing your website...</h2><ol id="ls"></ol></div></div>
+<div class="toast" id="ts" role="status"></div>
+
+<script>
+const $=(s,e=document)=>e.querySelector(s),$$=(s,e=document)=>[...e.querySelectorAll(s)];
+const P={search:"M11 4a7 7 0 100 14 7 7 0 000-14zM21 21l-4.3-4.3",chart:"M4 20V10M10 20V4M16 20v-7M22 20H2",link:"M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1",check:"M5 12.5l4.5 4.5L19 7",arrow:"M5 12h14M13 6l6 6-6 6",spark:"M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 17l.7 1.8L21.5 19.5l-1.8.7L19 22l-.7-1.8-1.8-.7 1.8-.7z",trend:"M3 17l6-6 4 4 8-8M15 7h6v6",doc:"M7 3h8l4 4v14H7zM15 3v4h4M10 12h6M10 16h6",key:"M4 7h10M4 12h7M4 17h10M18 9v8M15 14l3 3 3-3",users:"M16 20v-1a4 4 0 00-4-4H7a4 4 0 00-4 4v1M9.5 11a3.5 3.5 0 100-7 3.5 3.5 0 000 7zM21 20v-1a4 4 0 00-3-3.9M16 4.1a3.5 3.5 0 010 6.8"};
+const ic=(n,c='')=>`<svg class="ic ${c}" viewBox="0 0 24 24" aria-hidden="true"><path d="${P[n]}"/></svg>`;
+const ar=()=>ic('arrow','ar'),ck=()=>ic('check');
+const G=`<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="#4285F4" d="M22 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.6a4.8 4.8 0 01-2.1 3.1v2.6h3.400C21 17.800 22 15.200 22 12.200z"/><path fill="#34A853" d="M12 22c2.700 0 5-.9 6.600-2.500l-3.300-2.600c-.9.600-2 1-3.300 1-2.600 0-4.700-1.700-5.500-4H3.100v2.700A10 10 0 0012 22z"/><path fill="#FBBC05" d="M6.500 14c-.2-.6-.3-1.300-.3-2s.1-1.400.3-2V7.300H3.100a10 10 0 000 9.400z"/><path fill="#EA4335" d="M12 6c1.500 0 2.800.5 3.800 1.500l2.900-2.900A10 10 0 003.100 7.300L6.500 10c.8-2.300 2.900-4 5.500-4z"/></svg>`;
+const store={get:k=>{try{return sessionStorage.getItem(k)}catch(e){return null}},set:(k,v)=>{try{sessionStorage.setItem(k,v)}catch(e){}}};
+function toast(m){const t=$('#ts');t.textContent=m;t.classList.add('on');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('on'),3200)}
+function normUrl(v){v=v.trim();if(!v)return{e:'Enter your website address, for example yourbusiness.com.'};if(/\s/.test(v)||/^[a-z]+:\/\//i.test(v)&&!/^https?:\/\//i.test(v))return{e:'That doesn\u2019t look like a website address. Try yourbusiness.com.'};
+ const u=/^https?:\/\//i.test(v)?v:'https://'+v;try{const h=new URL(u).hostname;if(!/^([a-z0-9-]+\.)+[a-z]{2,}$/i.test(h))throw 0;return{u:h.replace(/^www\./,'')}}catch(e){return{e:'That doesn\u2019t look like a website address. Try yourbusiness.com.'}}}
+/* shared pieces */
+const URLF=(id,btn)=>`<form class="uf" novalidate data-f="${id}"><div class="url"><label for="${id}" class="sr">Website address</label>${ic('search')}<input id="${id}" type="text" inputmode="url" autocomplete="url" placeholder="Enter your website" aria-describedby="${id}e"><button class="btn b1" type="submit">${btn} ${ar()}</button></div><p class="err" id="${id}e" role="alert"></p></form>`;
+const MARK=`<svg viewBox="0 0 24 24"><path d="M6 19V5h7a4 4 0 010 8H6M12 13l5 6"/></svg>`;
+const GROW=['30 branded articles a month \u2013 one a day, with images','300 search terms researched and clustered','One website per subscription','Auto-publish to WordPress, Shopify, Ghost, Webflow and more','AI visibility tracked across ChatGPT, Claude, Gemini and Perplexity','Site audit, so your pages are AI- and Google-ready','Titles, metadata and schema written for every page','Backlinks from our partner network'];
+const SCALE=['100 branded articles a month \u2013 about 3 a day, with images','1,500 search terms researched and clustered','One website per subscription','Priority processing \u2013 your articles are written first','Custom feature requests',...GROW.slice(3)];
+const fl=(a,x=[])=>`<ul class="fl">${a.map(t=>`<li${x.includes(t)?' class="x"':''}>${ck()}<span>${t}</span></li>`).join('')}</ul>`;
+const plan=(k,n,p,d,f,pop)=>`<article class="card pc${pop?' pop':''}" aria-labelledby="p-${k}">${pop?'<span class="bd">Most popular</span>':''}<h3 id="p-${k}">${n}</h3><p class="d">${d}</p><div class="pr"><b>\u20AC${p}</b><span>/ month</span></div>${fl(f)}<a class="btn ${pop?'b1':'b2'}" href="#/signup?plan=${k}">Get started ${ar()}</a></article>`;
+const rowsC=[['Branded articles a month','30','100'],['Pace','One a day','About 3 a day'],['Search terms researched and clustered','300','1,500'],['Websites per subscription','1','1'],['Priority processing','\u2013','Yes'],['Custom feature requests','\u2013','Yes'],['Auto-publish to WordPress, Shopify, Ghost, Webflow and more','Yes','Yes'],['AI visibility tracking (ChatGPT, Claude, Gemini, Perplexity)','Yes','Yes'],['Site audit','Yes','Yes'],['Titles, metadata and schema for every page','Yes','Yes'],['Backlinks from our partner network','Yes','Yes']];
+const spark=`<svg class="spark" viewBox="0 0 200 64" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 L0 50 C30 48 40 38 70 36 S120 30 140 18 S185 8 200 4 L200 64 L0 64Z" fill="#FFF3EA"/><path class="l" d="M0 50 C30 48 40 38 70 36 S120 30 140 18 S185 8 200 4" fill="none" stroke="#C84B00" stroke-width="2.2" stroke-linecap="round"/></svg>`;
+
+/* pages */
+const HOME=()=>`
+<section class="hero" id="top"><div class="w hg"><div>
+ <h1>Rank on Google.<br><span class="o">Get recommended by AI.</span></h1>
+ <p class="lead">RepGet publishes SEO content, earns quality backlinks, and builds the authority that gets your business discovered.</p>
+ <div class="cta"><a class="btn b1" href="#/audit">Check my website for free ${ar()}</a><button class="btn b2" id="gg" type="button">${G} Join with Google</button></div>
+ <div class="trust"><span>${ck()}Free website check</span><span>${ck()}No credit card required</span><span>${ck()}Results in minutes</span></div>
+ <a class="hw" href="#/how-it-works"><i><svg viewBox="0 0 12 12"><path d="M1 0l11 6-11 6z"/></svg></i>See how it works</a>
+</div>
+<div class="cc" role="img" aria-label="Sample RepGet dashboard showing AI visibility and Google rankings">
+ <div class="card dash">
+  <div class="two">
+   <div><div class="dh"><b>AI visibility</b><span>Sample</span></div><div class="rows">
+    <div class="row">ChatGPT<span class="tag m"><i></i>Mentioned</span></div><div class="row">Claude<span class="tag"><i></i>Recommended</span></div><div class="row">Gemini<span class="tag"><i></i>Visible</span></div><div class="row">Perplexity<span class="tag"><i></i>Visible</span></div></div></div>
+   <div><div class="dh"><b>Google rankings</b><span>Position</span></div><div class="rows" id="rk">
+    <div class="row">SEO agency<span class="pos o" data-p="2">#2</span></div><div class="row">AI SEO tools<span class="pos o" data-p="4">#4</span></div><div class="row">SEO content<span class="pos o" data-p="6">#6</span></div></div>
+    <p class="sm" style="margin-top:10px">Clicks from Google</p>${spark}</div>
+  </div></div>
+ <div class="card chip c1">${ic('link')}<div>Quality backlinks<small>Get cited by real websites</small></div></div>
+ <div class="card chip c2">${ic('spark')}<div>Visible in AI answers<small>Show up where it matters</small></div></div>
+</div></div></section>
+
+<section id="product" style="padding-block:72px"><div class="w"><div class="hd" style="margin-bottom:40px"><h2>One platform. Multiple growth signals.</h2></div>
+<div class="flow">
+ <div>${ic('doc')}<h3>SEO content</h3><p>Branded articles published every day.</p></div>
+ <div>${ic('chart')}<h3>Google rankings</h3><p>Rankings and clicks, tracked.</p></div>
+ <div>${ic('spark')}<h3>AI visibility</h3><p>Whether assistants name you.</p></div>
+ <div>${ic('link')}<h3>Quality backlinks</h3><p>Cited by real websites.</p></div>
+ <div>${ic('trend')}<h3>Keyword tracking</h3><p>See what is working.</p></div></div></div></section>
+
+<section class="audit" id="audit"><div class="w"><div class="hd"><h2>Now see what RepGet finds on your website.</h2><p>Run a free SEO and AI visibility check and discover what\u2019s holding your website back.</p></div>
+<div class="card ab"><p class="sm" style="margin-bottom:18px;font-weight:600;color:var(--o)">Free with your audit</p>
+ <div class="ben"><div><h3>${ic('search')}<span><span class="n">01</span> SEO &amp; AI audit</span></h3><p>See your site\u2019s health, what is missing, and how AI assistants mention you.</p></div>
+ <div><h3>${ic('chart')}<span><span class="n">02</span> A plan to act on</span></h3><p>The specific changes worth making, in the order worth making them.</p></div>
+ <div><h3>${ic('link')}<span><span class="n">03</span> Your first backlink</span></h3><p>One link from a real business in a related field, earned rather than bought.</p></div></div>
+ ${URLF('u1','Check my website')}</div>
+<div class="ck"><span>${ck()}No account needed</span><span>${ck()}Nothing to cancel</span><span>${ck()}Results in minutes</span></div></div></section>
+
+<section id="pricing"><div class="w"><div class="hd"><h2>Simple pricing</h2><p>Everything is included in every plan. The difference is how much we write for you each month \u2013 and how many backlinks you get from our partner network.</p></div>
+<div class="pg">${plan('grow','Grow',99,'For sites building steady momentum.',GROW,1)}${plan('scale','Scale',299,'For sites that want to move faster.',SCALE)}</div>
+<button class="btn b3 cmp" id="cm" aria-expanded="false" aria-controls="ct">Compare plans</button>
+<div class="card ct" id="ct"><table><thead><tr><th scope="col">Feature</th><th scope="col">Grow</th><th scope="col">Scale</th></tr></thead><tbody>${rowsC.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join('')}</tbody></table></div></div></section>
+
+<section class="fin"><div class="w"><div class="fc">
+ <span class="dp2 d1"><b>#2</b> SEO agency</span><span class="dp2 d2"><b>\u25CF</b> Visible in AI answers</span>
+ <h2>Your website could be <span>growing faster.</span></h2><p>Discover what\u2019s holding your website back with a free SEO audit. No account required.</p>
+ <div class="cta"><a class="btn b1" href="#/audit">Check my website for free ${ar()}</a><a class="btn b2" href="#/articles">Create 3 Articles for Free ${ar()}</a></div>
+ <div class="ck" style="margin-top:26px"><span>${ck()}Cancel any time</span><span>${ck()}Set up in minutes</span></div>
+ <svg class="gl" viewBox="0 0 1000 150" preserveAspectRatio="none" aria-hidden="true"><path d="M0 140 C150 135 220 120 330 112 S520 80 640 70 S850 30 1000 14" fill="none" stroke="#FF5A1F" stroke-width="2" opacity=".55"/><circle cx="330" cy="112" r="4" fill="#FF5A1F"/><circle cx="640" cy="70" r="4" fill="#FF5A1F"/><circle cx="1000" cy="14" r="4" fill="#FF5A1F"/></svg>
+</div></div></section>`;
+
+const HOW=()=>`<div class="pgw"><div class="w"><div class="hd"><h1 style="font-size:clamp(2rem,4vw,3rem)">How RepGet works</h1><p>From a free check to being found on Google and in AI answers.</p></div>
+<div class="tl">${[['1','Audit','Check your website for free. See its SEO health and whether AI assistants mention you.'],['2','Create','RepGet researches search terms and writes branded articles, with titles, metadata and schema.'],['3','Build authority','Quality backlinks from our partner network earn the authority search engines look for.'],['4','Get discovered','Track rankings, clicks and AI visibility as your business shows up where it matters.']].map(s=>`<div><i>${s[0]}</i><div><h3>${s[1]}</h3><p>${s[2]}</p></div></div>`).join('')}</div>
+<div class="cta" style="justify-content:center;margin-top:16px"><a class="btn b1" href="#/audit">Check my website for free ${ar()}</a></div></div></div>`;
+
+const LOGIN=()=>`<div class="pgw"><div class="w nar"><h1 style="font-size:2rem;margin-bottom:24px;text-align:center">Log in to RepGet</h1><form class="card fm" id="lf" novalidate>
+<button class="btn b2" type="button" data-g>${G} Continue with Google</button><div class="or">or</div>
+<label>Email<input class="in" name="email" type="email" autocomplete="email" required><span class="fe"></span></label>
+<label>Password<input class="in" name="pw" type="password" autocomplete="current-password" required><span class="fe"></span></label>
+<a class="sm" href="#/login" data-forgot style="justify-self:end;text-decoration:underline">Forgot password?</a>
+<button class="btn b1" type="submit">Log in</button><p class="note">Prototype: no real authentication is connected.</p></form>
+<p class="sm" style="text-align:center;margin-top:18px">New to RepGet? <a class="o" href="#/signup?plan=grow" style="font-weight:600">Create an account</a></p></div></div>`;
+
+const SIGNUP=q=>{const pl=q.get('plan')==='scale'?'scale':'grow';return `<div class="pgw"><div class="w nar" style="max-width:520px"><h1 style="font-size:2rem;margin-bottom:8px">Start growing with RepGet</h1><p class="sm" style="margin-bottom:24px">Prototype onboarding \u2013 no payment is taken.</p>
+<div class="stp" aria-hidden="true"><i class="on"></i><i id="s2"></i></div>
+<form class="card fm" id="sf" novalidate><div id="st1" style="display:grid;gap:16px">
+<fieldset style="border:0;padding:0"><legend class="sm" style="margin-bottom:8px;font-weight:600;color:var(--ink)">Plan</legend><div class="pl"><label><input type="radio" name="plan" value="grow"${pl==='grow'?' checked':''}><span><b>Grow</b><small>\u20AC99 / month</small></span></label><label><input type="radio" name="plan" value="scale"${pl==='scale'?' checked':''}><span><b>Scale</b><small>\u20AC299 / month</small></span></label></div></fieldset>
+<button class="btn b2" type="button" data-g>${G} Continue with Google</button><div class="or">or</div>
+<label>Email<input class="in" name="email" type="email" autocomplete="email"><span class="fe"></span></label>
+<label>Password<input class="in" name="pw" type="password" autocomplete="new-password"><span class="fe"></span></label>
+<label>Website URL<input class="in" name="site" type="text" inputmode="url" placeholder="yourbusiness.com"><span class="fe"></span></label>
+<button class="btn b1" type="submit">Continue ${ar()}</button></div>
+<div id="st2" style="display:none;gap:16px"><h2 style="font-size:1.4rem">Confirm your details</h2><div class="rows" id="sum"></div><div class="note">Prototype: confirming does not create an account or charge a card.</div>
+<div style="display:flex;gap:12px"><button class="btn b2" type="button" id="bk">Back</button><button class="btn b1" type="button" id="cf" style="flex:1">Confirm</button></div></div></form>
+<p class="sm" style="text-align:center;margin-top:18px">Already have an account? <a class="o" href="#/login" style="font-weight:600">Log in</a></p></div></div>`};
+
+const ART=()=>`<div class="pgw"><div class="w"><div class="nar" style="max-width:600px" id="ar">
+<div class="stp" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+<h1 style="font-size:2rem;margin-bottom:8px">Create 3 articles for free</h1><p class="sm" style="margin-bottom:24px">Step 1 of 3 \u2013 Enter your website.</p>${URLF('u2','Continue')}</div></div></div>`;
+
+const ISSUES=[['SEO health',82],['AI visibility',64],['Technical SEO',91],['Content quality',73]];
+const RES=()=>{const s=store.get('rg_site')||'yourwebsite.com',ai=[['ChatGPT','Mentioned'],['Claude','Not detected'],['Gemini','Mentioned'],['Perplexity','Not detected']];
+return `<div class="pgw"><div class="w"><span class="demo">Sample audit \u2013 demo data, not a real scan of ${s}</span><h1 style="font-size:clamp(2rem,4vw,3rem)">Your RepGet Website Audit</h1><p class="sm" style="margin-top:6px">${s}</p>
+<div class="card sc"><div class="ring" id="rg"><div><span><b>78</b><small>/ 100</small></span></div></div><div class="ms">${ISSUES.map(m=>`<div><b>${m[1]}%</b><span>${m[0]}</span><div class="bar"><i data-w="${m[1]}"></i></div></div>`).join('')}</div></div>
+<div class="g3"><div class="card"><span class="tag r"><i></i>Critical</span><div class="big" style="margin-top:10px">3</div><h3>Critical issues</h3><ul><li>Missing meta descriptions</li><li>No schema markup</li><li>Slow mobile load</li></ul></div>
+<div class="card"><span class="tag m"><i></i>Improve</span><div class="big" style="margin-top:10px">7</div><h3>Improvements</h3><ul><li>Thin pages to expand</li><li>Internal links to add</li><li>Images missing alt text</li></ul></div>
+<div class="card"><span class="tag"><i></i>Good</span><div class="big" style="margin-top:10px">14</div><h3>What\u2019s working</h3><ul><li>HTTPS and indexing</li><li>Clean URL structure</li><li>Sitemap present</li></ul></div></div>
+<div class="card" style="padding:24px;margin:20px 0 32px"><h3 style="margin-bottom:6px">AI visibility</h3><div class="rows">${ai.map(a=>`<div class="row">${a[0]}<span class="tag ${a[1]==='Mentioned'?'':'n'}"><i></i>${a[1]}</span></div>`).join('')}</div></div>
+<div class="cta"><button class="btn b2" id="vr" type="button">View recommendations</button><a class="btn b1" href="#/pricing">Improve my visibility ${ar()}</a></div></div></div>`};
+
+/* router */
+const app=$('#app');
+function route(){const h=location.hash.slice(1)||'/',[p,qs]=h.split('?'),q=new URLSearchParams(qs||''),path=p.replace(/^\/|\/$/g,'');
+ closeMenu();
+ if(['','product','audit','pricing'].includes(path)){if(!$('#top')){app.innerHTML=HOME();initHome()}const t=path&&$('#'+path);window.scrollTo(0,0);if(t)setTimeout(()=>{t.scrollIntoView({behavior:'smooth'});if(path==='audit')setTimeout(()=>$('#u1').focus({preventScroll:true}),500)},30);document.title='RepGet \u2013 Rank on Google. Get recommended by AI.';return}
+ const m={'how-it-works':[HOW,'How it works'],login:[LOGIN,'Log in'],signup:[SIGNUP,'Sign up'],articles:[ART,'Free articles'],'audit-results':[RES,'Your audit']}[path];
+ if(!m){location.hash='#/';return}
+ app.innerHTML=m[0](q);document.title='RepGet \u2013 '+m[1];window.scrollTo(0,0);app.focus({preventScroll:true});({login:initLogin,signup:initSignup,articles:initArt,'audit-results':initRes})[path]?.(q)}
+function bindUrl(f,cb){const i=$('input',f),w=$('.url',f),e=$('.err',f);i.addEventListener('input',()=>{w.classList.remove('e');e.textContent=''});
+ f.addEventListener('submit',ev=>{ev.preventDefault();const r=normUrl(i.value);if(r.e){w.classList.add('e');e.textContent=r.e;i.setAttribute('aria-invalid','true');i.focus();return}i.removeAttribute('aria-invalid');store.set('rg_site',r.u);cb(r.u)})}
+function runSteps(steps,done,gap=750){const ld=$('#ld'),ol=$('#ls');ol.innerHTML=steps.map(s=>`<li><i></i>${s}</li>`).join('');ld.classList.add('on');const li=$$('li',ol);let n=0;(function nx(){if(n>0)li[n-1].className='d';if(n===li.length){setTimeout(()=>{ld.classList.remove('on');done()},350);return}li[n].className='a';n++;setTimeout(nx,matchMedia('(prefers-reduced-motion:reduce)').matches?150:gap)})()}
+function initHome(){bindUrl($('form[data-f=u1]'),()=>runSteps(['Checking technical SEO','Analyzing content','Checking search visibility','Analyzing AI visibility','Preparing recommendations'],()=>{location.hash='#/audit-results'}));
+ $('#gg').onclick=()=>{toast('Google sign-in isn\u2019t connected in this prototype.');location.hash='#/signup?plan=grow'};
+ $('#cm').onclick=function(){const o=$('#ct').classList.toggle('on');this.setAttribute('aria-expanded',o);this.textContent=o?'Hide comparison':'Compare plans'};
+ if(!matchMedia('(prefers-reduced-motion:reduce)').matches)$$('#rk .pos').forEach((el,i)=>{const to=+el.dataset.p;let v=to+9;const t=setInterval(()=>{v--;el.textContent='#'+v;if(v<=to)clearInterval(t)},70+i*30)})}
+function initLogin(){$$('[data-g]').forEach(b=>b.onclick=()=>toast('Google sign-in isn\u2019t connected in this prototype.'));$('[data-forgot]').onclick=e=>{e.preventDefault();toast('Password reset isn\u2019t connected in this prototype.')};
+ $('#lf').onsubmit=e=>{e.preventDefault();const f=e.target;let ok=1;[['email',v=>/^\S+@\S+\.\S+$/.test(v),'Enter a valid email, like name@company.com.'],['pw',v=>v.length>=1,'Enter your password.']].forEach(([n,t,m])=>{const i=f[n],s=i.nextElementSibling,g=t(i.value.trim());i.classList.toggle('e',!g);s.textContent=g?'':m;if(!g)ok=0});if(ok)toast('Prototype only \u2013 no account system is connected.')}}
+function initSignup(){const f=$('#sf');$$('[data-g]').forEach(b=>b.onclick=()=>toast('Google sign-in isn\u2019t connected in this prototype.'));
+ f.onsubmit=e=>{e.preventDefault();let ok=1;const set=(n,g,m)=>{const i=f[n],s=i.nextElementSibling;i.classList.toggle('e',!g);s.textContent=g?'':m;if(!g)ok=0};
+  set('email',/^\S+@\S+\.\S+$/.test(f.email.value.trim()),'Enter a valid email, like name@company.com.');set('pw',f.pw.value.length>=8,'Use at least 8 characters.');const r=normUrl(f.site.value);set('site',!r.e,r.e||'');
+  if(!ok)return;const pl=f.plan.value==='scale'?['Scale','\u20AC299 / month']:['Grow','\u20AC99 / month'];
+  $('#sum').innerHTML=[['Plan',pl[0]+' \u2013 '+pl[1]],['Email',f.email.value.trim()],['Website',r.u]].map(x=>`<div class="row"><span class="sm">${x[0]}</span><b></b></div>`).join('');$$('#sum b').forEach((b,i)=>b.textContent=[pl[0]+' \u2013 '+pl[1],f.email.value.trim(),r.u][i]);
+  $('#st1').style.display='none';$('#st2').style.display='grid';$('#s2').classList.add('on');$('#st2').scrollIntoView({block:'center'})};
+ $('#bk').onclick=()=>{$('#st2').style.display='none';$('#st1').style.display='grid';$('#s2').classList.remove('on')};
+ $('#cf').onclick=()=>{toast('Prototype complete \u2013 no account created and nothing charged.');setTimeout(()=>location.hash='#/',1800)}}
+const TOP=[['How to choose an SEO agency','seo agency','A practical guide to comparing agencies, pricing and results.'],['AI search: what it means for your business','ai search visibility','How assistants decide which businesses to recommend.'],['A plain-English guide to SEO content','seo content','What to publish, how often, and why it earns rankings.']];
+function initArt(){const box=$('#ar');bindUrl($('form',box),site=>{box.innerHTML=`<div class="stp" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></div><h1 style="font-size:2rem;margin-bottom:8px">Choose topics</h1><p class="sm" style="margin-bottom:20px">Step 2 of 3 \u2013 Sample topics for <b id="sn"></b>.</p><form class="topics" id="tf">${TOP.map((t,i)=>`<label><input type="checkbox" checked value="${i}"><span>${t[0]}</span></label>`).join('')}<p class="fe" id="te"></p><button class="btn b1" type="submit" style="margin-top:8px">Generate articles ${ar()}</button></form>`;$('#sn').textContent=site;
+ $('#tf').onsubmit=e=>{e.preventDefault();const sel=$$('input:checked',e.target).map(i=>+i.value);if(!sel.length){$('#te').textContent='Choose at least one topic.';return}
+  runSteps(['Researching','Planning','Writing','Optimizing'],()=>{box.innerHTML=`<div class="stp" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></div><span class="demo">Sample articles \u2013 demo content, no AI backend connected</span><h1 style="font-size:2rem;margin-bottom:20px">Your articles</h1><div style="display:grid;gap:16px">${sel.map(i=>`<article class="card ar"><span class="tag m">${TOP[i][1]}</span><h3>${TOP[i][0]}</h3><p>${TOP[i][2]}</p><div class="pv">Preview: sample opening paragraph for ${site}. Real articles are written in your brand voice once connected.</div></article>`).join('')}</div><div class="cta" style="margin-top:24px"><a class="btn b1" href="#/signup?plan=grow">Start growing with RepGet ${ar()}</a></div>`;window.scrollTo(0,0)},900)}})}
+function initRes(){const r=$('#rg');if(r)setTimeout(()=>{},0);$$('.bar i').forEach(b=>setTimeout(()=>b.style.width=b.dataset.w+'%',60));$('#vr').onclick=()=>$('.g3').scrollIntoView({behavior:'smooth',block:'center'})}
+/* header + menu */
+const dr=$('#dr');function closeMenu(){dr.classList.remove('on');dr.setAttribute('aria-hidden','true');$('#mb').setAttribute('aria-expanded','false');document.body.style.overflow=''}
+$('#mb').onclick=()=>{dr.classList.add('on');dr.setAttribute('aria-hidden','false');$('#mb').setAttribute('aria-expanded','true');document.body.style.overflow='hidden';$('#mx').focus()};
+$('#mx').onclick=()=>{closeMenu();$('#mb').focus()};dr.onclick=e=>{if(e.target===dr)closeMenu()};addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+addEventListener('scroll',()=>$('#hd').classList.toggle('s',scrollY>8),{passive:true});
+addEventListener('hashchange',route);route();
+</script>
+</body>
+</html>
